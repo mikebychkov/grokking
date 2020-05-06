@@ -1,4 +1,4 @@
-package ch02;
+package ch04;
 
 public class RecursiveSum {
 

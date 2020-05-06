@@ -1,6 +1,5 @@
-package ch02;
+package ch04;
 
-import ch01.BinarySearch;
 import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
