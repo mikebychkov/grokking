@@ -1,4 +1,4 @@
-package ch01;
+package algo.ch01;
 
 public class BinarySearch {
     public static int search(int[] list, int item) {

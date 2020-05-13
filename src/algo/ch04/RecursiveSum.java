@@ -1,4 +1,4 @@
-package ch04;
+package algo.ch04;
 
 public class RecursiveSum {
 

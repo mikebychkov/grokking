@@ -1,4 +1,4 @@
-package ch04;
+package algo.ch04;
 
 import org.junit.Test;
 import static org.junit.Assert.assertThat;

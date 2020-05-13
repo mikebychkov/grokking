@@ -1,4 +1,4 @@
-package ch01;
+package algo.ch01;
 
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
