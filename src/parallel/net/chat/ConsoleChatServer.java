@@ -17,13 +17,10 @@ public class ConsoleChatServer {
                 Socket so = ss.accept();
                 System.out.println("Socket#1 accepted!");
                 String msg;
-                try (BufferedReader reader = new BufferedReader(new InputStreamReader(so.getInputStream()))) {
+                try (BufferedReader reader = new BufferedReader(new InputStreamReader(so.getInputStream()));
+                     PrintWriter writer = new PrintWriter(so.getOutputStream())) {
                     msg = reader.readLine();
                     System.out.println("Message: " + msg);
-                }
-                Socket so2 = ss.accept();
-                System.out.println("Socket#2 accepted!");
-                try (PrintWriter writer = new PrintWriter(so2.getOutputStream())) {
                     System.out.println("Sending back message: " + msg);
                     writer.println(msg);
                 }

@@ -16,12 +16,11 @@ public class ConsoleChatClient {
                 System.out.println("Enter message:");
                 String msg = userIn.nextLine();
                 Socket s = new Socket("127.0.0.1", 4242);
-                try (PrintWriter writer = new PrintWriter(s.getOutputStream())) {
+                try (PrintWriter writer = new PrintWriter(s.getOutputStream());
+                     BufferedReader reader = new BufferedReader(new InputStreamReader(s.getInputStream()))) {
                     System.out.println("Sending message...");
                     writer.println(msg);
-                }
-                Socket s2 = new Socket("127.0.0.1", 4242);
-                try (BufferedReader reader = new BufferedReader(new InputStreamReader(s2.getInputStream()))) {
+                    writer.flush();
                     System.out.println("Reading server answer...");
                     String rsl = reader.readLine();
                     System.out.println("Server said: " + rsl);
