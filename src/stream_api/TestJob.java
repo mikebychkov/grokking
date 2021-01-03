@@ -11,7 +11,7 @@ public class TestJob {
     public static void main(String[] args) {
 
         List<String> words = Arrays.stream(str.split(" ")).filter(w -> w.toCharArray()[0] == 'P' && w.length() <= 9)
-                        .sorted().distinct().collect(Collectors.toList());
+                        .map(s -> s.toUpperCase()).sorted().distinct().collect(Collectors.toList());
         System.out.println(words);
     }
 }
