@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class TestJob {
 
-    private final static String str = "petro Pavlovsk Amur darya Pripyat Poprigunchik Palindrom antonio Pripyat Beluchy Pavlovsk Mickelangelo";
+    private final static String str = "petro Pavlovsk Amur darya Pripyat Poprigunchik exercices Palindrom antonio Pripyat Beluchy Pavlovsk Mickelangelo";
 
     public static void main(String[] args) {
 
