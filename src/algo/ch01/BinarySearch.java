@@ -1,7 +1,9 @@
 package algo.ch01;
 
-public class BinarySearch {
-    public static int search(int[] list, int item) {
+public class BinarySearch implements BS {
+
+    @Override
+    public int search(int[] list, int item) {
         int low = 0;
         int high = list.length - 1;
         while (low <= high) {
